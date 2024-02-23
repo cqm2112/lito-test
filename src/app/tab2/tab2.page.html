@@ -1,17 +1,32 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-thumbnail slot="start">
+      <img class="logo" alt="Silhouette of mountains" src="../../assets/icon/litoicon.png" />
+    </ion-thumbnail>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+<ion-content>
+  <ion-card *ngFor="let insurance of insurances">
+    <!-- Asegúrate de que la propiedad 'image' existe en tu interfaz Insurance -->
+    <img class="insurance_img" src={{insurance.image}} alt="Imagen">
+
+    <ion-card-header>
+      <!-- Asegúrate de que la propiedad 'name' existe en tu interfaz Insurance -->
+      <ion-card-title>{{ insurance.name }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <!-- Accede a la propiedad 'description' de cada objeto 'Insurance' -->
+      {{ insurance.description }}
+    </ion-card-content>
+    <div class="button_card_container">
+    <ion-button (click)="openEditModal(insurance)">Editar</ion-button>
+    <ion-button color="danger" (click)="deleteInsurance(insurance._id)">Eliminar</ion-button>
+  </div>
+  </ion-card>
 </ion-content>

@@ -1,0 +1,24 @@
+<!-- edit-insurance.page.html -->
+
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Editar Seguro</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="dismissModal()">Cancelar</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="insurance.name" name="name" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Descripción</ion-label>
+      <ion-input [(ngModel)]="insurance.description" name="description" type="text"></ion-input>
+    </ion-item>
+    <!-- Otros campos para editar -->
+    <ion-button expand="block" (click)="saveChanges()">Guardar Cambios</ion-button>
+  </ion-content>
+  

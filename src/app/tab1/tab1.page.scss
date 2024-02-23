@@ -1,0 +1,88 @@
+
+ion-toolbar{
+    --background: white;
+}
+.logo{
+    min-width: 105px !important;
+    max-width: 105px !important;
+}
+h1,h2,h3,h6, span{
+    font-weight: bold;
+    text-align: center;
+}
+h2{
+    font-weight:500 !important;
+    color: white;
+    margin: 0;
+}
+h3{
+    padding: 10px;
+}
+h6{
+    text-decoration: underline;
+}
+.quote_container{
+    background-color: #304d8c;
+    height: 8%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ion-card{
+    margin: 1px !important;
+    border: 1px solid #50b2ff;
+}
+
+.insurance-img{
+    width: 80px;
+    max-width: none !important;
+}
+.banner-container{
+    height: 29%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.background-image{
+  
+    background-image: url('../../assets/Nissan-banner.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 90%;
+    height: 51%;
+    border-radius: 10px;
+
+}
+.curtain{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0.2638305322128851) 53%, rgba(61,61,255,0.3786764705882353) 77%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 10px;
+    justify-content: end;
+}
+.banner-text{
+    margin: 0 !important;
+    color: rgb(255, 245, 46) !important;
+}
+.banner-text-content{
+    width: 67%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.buttons-container{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+ion-button{
+    --border-radius: 30px !important;
+    min-width: 170px;
+    min-height: 10px;
+    --background: #304d8c;
+}
